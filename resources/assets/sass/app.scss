@@ -1,6 +1,31 @@
 
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+// @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
 
-@import "../semantic/dist/semantic";
+@import url("../semantic/dist/semantic.min.css");
+
+// import only used packages
+// @import url("../semantic/dist/components/button.min.css");
+// @import url("../semantic/dist/components/card.min.css");
+// @import url("../semantic/dist/components/container.min.css");
+// @import url("../semantic/dist/components/dimmer.min.css");
+// @import url("../semantic/dist/components/divider.min.css");
+// @import url("../semantic/dist/components/dropdown.min.css");
+// @import url("../semantic/dist/components/flag.min.css");
+// @import url("../semantic/dist/components/form.min.css");
+// @import url("../semantic/dist/components/grid.min.css");
+// @import url("../semantic/dist/components/header.min.css");
+// @import url("../semantic/dist/components/icon.min.css");
+// @import url("../semantic/dist/components/image.min.css");
+// @import url("../semantic/dist/components/input.min.css");
+// @import url("../semantic/dist/components/item.min.css");
+// @import url("../semantic/dist/components/label.min.css");
+// @import url("../semantic/dist/components/list.min.css");
+// @import url("../semantic/dist/components/menu.min.css");
+// @import url("../semantic/dist/components/modal.min.css");
+// @import url("../semantic/dist/components/segment.min.css");
+// @import url("../semantic/dist/components/sidebar.min.css");
+// @import url("../semantic/dist/components/sticky.min.css");
+// @import url("../semantic/dist/components/transition.min.css");
+// @import url("../semantic/dist/components/visibility.min.css");

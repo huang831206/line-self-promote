@@ -15,8 +15,60 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+// register global event bus
+import {EventBus} from './utils/EventBus';
+window.EventBus = new EventBus();
+
+/** start register utilities **/
+
+// corresponding class for personal information
+import {Information} from './utils/Information';
+window.Information = new Information();
+
+// global plugins
+import {Utils} from './utils/Utils';
+Vue.use(Utils);
+
+/** end register utilities **/
+
+
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
+Vue.component('intro', require('./components/Intro.vue'));
+Vue.component('quote-section', require('./components/Quote.vue'));
+Vue.component('my-works', require('./components/MyWorks.vue'));
+
+Vue.component('top-triangle', require('./components/partials/TopTriangle.vue'));
+Vue.component('bottom-triangle', require('./components/partials/BottomTriangle.vue'));
+
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+
+    data: {
+        d: [
+            '111', '222', '333'
+        ]
+    },
+
+    computed: {
+
+    },
+
+    filters: {
+
+    },
+
+    methods: {
+        href(menuItem) {
+            if(menuItem.href) {
+                return menuItem.href;
+            } else {
+                return menuItem.name.toLowerCase();
+            }
+        }
+    },
+
+    mounted() {
+
+    }
 });
