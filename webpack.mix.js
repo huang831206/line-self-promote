@@ -21,7 +21,6 @@ let mix = require('laravel-mix');
 
 // TODO: extract used semantic js files only
 mix.js('resources/assets/js/app.js', 'public/js')
-   .js('resources/assets/js/index.js', 'public/js')
    .js([
        'resources/assets/js/utils/EventBus.js',
        'resources/assets/js/utils/Information.js',
