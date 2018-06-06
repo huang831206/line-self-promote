@@ -2,7 +2,8 @@
     export default {
         data() {
             return {
-                quote: 'This world is changing. We decide into what.'
+                quote : 'This world is changing. We decide into what.',
+                from : 'Kai\'sa'
             };
         }
     }

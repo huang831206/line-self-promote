@@ -5,27 +5,40 @@
 
 @import url("../semantic/dist/semantic.min.css");
 
-// import only used packages
-// @import url("../semantic/dist/components/button.min.css");
-// @import url("../semantic/dist/components/card.min.css");
-// @import url("../semantic/dist/components/container.min.css");
-// @import url("../semantic/dist/components/dimmer.min.css");
-// @import url("../semantic/dist/components/divider.min.css");
-// @import url("../semantic/dist/components/dropdown.min.css");
-// @import url("../semantic/dist/components/flag.min.css");
-// @import url("../semantic/dist/components/form.min.css");
-// @import url("../semantic/dist/components/grid.min.css");
-// @import url("../semantic/dist/components/header.min.css");
-// @import url("../semantic/dist/components/icon.min.css");
-// @import url("../semantic/dist/components/image.min.css");
-// @import url("../semantic/dist/components/input.min.css");
-// @import url("../semantic/dist/components/item.min.css");
-// @import url("../semantic/dist/components/label.min.css");
-// @import url("../semantic/dist/components/list.min.css");
-// @import url("../semantic/dist/components/menu.min.css");
-// @import url("../semantic/dist/components/modal.min.css");
-// @import url("../semantic/dist/components/segment.min.css");
-// @import url("../semantic/dist/components/sidebar.min.css");
-// @import url("../semantic/dist/components/sticky.min.css");
-// @import url("../semantic/dist/components/transition.min.css");
-// @import url("../semantic/dist/components/visibility.min.css");
+@import url("./circle.css");
+
+// override with semantic cariables
+$colors:
+    "red"       #DB2828,
+    "orange"    #F2711C,
+    "yellow"    #FBBD08,
+    "olive"     #B5CC18,
+    "green"     #21BA45,
+    "teal"      #00B5AD,
+    "blue"      #2185D0,
+    "violet"    #6435C9,
+    "purple"    #A333C8,
+    "pink"      #E03997,
+    "brown"     #A5673F,
+    "grey"      #767676,
+    "black"     #1B1C1D;
+
+.c100.dark {
+
+    &:after {
+        background-color: #1b1c1d;
+    }
+
+    &:hover > span {
+      color: white !important;
+    }
+
+    @each $i in $colors {
+    	&.#{nth($i, 1)} {
+            .fill, .bar {
+                border-color: nth($i, 2) !important;
+    	   }
+        }
+    }
+
+}

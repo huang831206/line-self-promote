@@ -31,31 +31,27 @@ Vue.use(Utils);
 
 /** end register utilities **/
 
-
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
+/** start register components **/
+// Vue.component('example-component', require('./components/ExampleComponent.vue'));
 Vue.component('intro', require('./components/Intro.vue'));
 Vue.component('quote-section', require('./components/Quote.vue'));
 Vue.component('my-works', require('./components/MyWorks.vue'));
+Vue.component('skills', require('./components/Skills.vue'));
+Vue.component('paint-panel', require('./components/PaintPanel.vue'));
+/** end register components **/
 
+/** start register partials **/
 Vue.component('top-triangle', require('./components/partials/TopTriangle.vue'));
 Vue.component('bottom-triangle', require('./components/partials/BottomTriangle.vue'));
-
+Vue.component('card', require('./components/partials/Card.vue'));
+Vue.component('skill', require('./components/partials/Skill.vue'));
+/** end register partials **/
 
 const app = new Vue({
     el: '#app',
 
     data: {
-        d: [
-            '111', '222', '333'
-        ]
-    },
-
-    computed: {
-
-    },
-
-    filters: {
-
+        infoData : {}
     },
 
     methods: {
@@ -66,6 +62,13 @@ const app = new Vue({
                 return menuItem.name.toLowerCase();
             }
         }
+    },
+
+    created() {
+        window.Information.reload().then( infos => {
+            this.infoData = window.Information.all();
+        });
+
     },
 
     mounted() {

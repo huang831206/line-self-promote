@@ -13,37 +13,22 @@
 
 Route::get('/', function () {
     $page_options = [
-        [
-            'name' => 'Home'
-        ],[
-            'name' => 'About'
-        ]
+        ['name' => 'Home'],
+        ['name' => 'About'],
+        ['name' => 'MyWorks'],
+        ['name' => 'Skills']
     ];
 
-    return view('home')->with(['page_options' => $page_options]);
-});
-
-
-Route::get('/home', function () {
-
-    $page_options = [
-        [
-            'name' => 'Home'
-        ],[
-            'name' => 'About'
-        ]
+    $ssr = [
+        'name' => '黃琮閔'
     ];
 
-    return view('home')->with(['page_options' => $page_options]);
+    return view('home')->with(['page_options' => $page_options, 'ssr' => $ssr]);
 });
 
-Route::post('/basic_info', function (Request $request) {
-    $data = [
-        'all' => [
-            'name',
-            'age',
-            'other'
-        ]
-    ];
-    return $data;
-});
+// get basic info
+Route::post('/basic_info', 'InformationController@all');
+// get new random digit
+Route::get('/handwrite', 'HandwriteController@get');
+// verify a image
+Route::post('/handwrite', 'HandwriteController@verify');

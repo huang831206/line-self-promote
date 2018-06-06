@@ -16,7 +16,7 @@
     <meta property="og:description" content="A introduction to Ben Huang. Hope you know me more :)" >
 
     <meta itemprop="name" content="About Ben Huang">
-    <meta itemprop="image" content="{{ asset('images/ogimg.jpg') }}址">
+    <meta itemprop="image" content="{{ asset('images/ogimg.jpg') }}">
     <meta itemprop="description" content="A introduction to Ben Huang.  Hope you know me more :)">
 
     <link rel="author" href="http://benhuang.info/articles/">
@@ -63,18 +63,17 @@
             @endforeach
             <div class="right menu">
                 <div class="item">
-                    <a class="ui primary button no-scroll">Sign Up</a>
+                    <a class="ui primary button" href="#play">Let's play</a>
                 </div>
             </div>
         </div>
     </div>
 
     {{-- Sidebar Menu --}}
-    <div class="ui vertical inverted sidebar menu left menu-list" style="">
+    <div class="ui vertical inverted sidebar menu left menu-list">
         @foreach ($page_options as $key => $item)
             <a class='{{ $key == 0 ? 'active' : '' }} item' href="{{ '#'.strtolower($item['name']) }}">{{ $item['name'] }}</a>
         @endforeach
-        {{-- <a class="item">Signup</a> --}}
     </div>
 
 
@@ -95,7 +94,7 @@
                                 <a class='{{ $key == 0 ? 'active' : '' }} item' href="{{ '#'.strtolower($item['name']) }}">{{ $item['name'] }}</a>
                             @endforeach
                             <div class="right item">
-                                <a class="ui inverted blue button no-scroll" href="#">Register</a>
+                                <a class="ui inverted blue button" href="#play">Let's play</a>
                             </div>
                         </div>
                     </div>
@@ -104,20 +103,17 @@
                 {{-- center text --}}
                 <div class="ui text container">
                     <h1 class="ui inverted header">
-                            Main
-                        </h1>
-                    <h2 style="color:white;">SECOND</h2>
-                    <div id="main-go" class="ui huge primary button">Get Started <i class="right arrow icon"></i></div>
+                        <img class="ui circular image" src="{{ asset('images/head.jpg') }}"><br>
+                        {{ $ssr['name'] }}
+                    </h1>
+                    <h2 style="color:white;">Ben Huang</h2>
                 </div>
             </div>
         </div>
 
 
-        {{-- <test :items="d"></test> --}}
-
-
         <!-- intro section -->
-        <intro img-src="{{ asset('images/background.jpg') }}"></intro>
+        <intro img-src="{{ asset('images/me3.jpg') }}" :info-data="infoData"></intro>
 
 
         {{-- quote section --}}
@@ -129,7 +125,8 @@
                         <div class="column">
                             <h3 v-text="quote"></h3>
                             <p>
-                                <img src="{{ asset('images/ogimg.jpg') }}" class="ui avatar image" alt="quote"> <b>Ben</b> nerd
+                                <img src="{{ asset('images/kaisa.jpg') }}" class="ui avatar image" alt="quote">
+                                <b v-text="from"></b>
                             </p>
                         </div>
                     </div>
@@ -137,83 +134,70 @@
             </div>
         </quote-section>
 
-
         {{-- my work section --}}
-        <my-works fallback-img="{{ asset('images/background.jpg') }}"></my-works>
+        <my-works fallback-img="{{ asset('images/background.jpg') }}" :info-data="infoData"></my-works>
 
 
-        <div class="ui inverted vertical stripe segment">
-            <h4 class="ui horizontal divider header">
-                <i class="users icon"></i>
-                Team
-            </h4>
-            <div class="ui five column center aligned stackable grid container">
-                <div class="column">
-                    <img class="ui centered small circular image" src="{{ asset('images/ogimg.jpg') }}" alt="img">
-                    <h1 class="ui header name-lbl">黃琮閔</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                    <div class="ui basic button">View details »</div>
-                </div>
-                <div class="column">
-                    <img class="ui centered small circular image" src="{{ asset('images/ogimg.jpg') }}" alt="img">
-                    <h1 class="ui header name-lbl">黃琮閔</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                    <div class="ui basic button">View details »</div>
-                </div>
-            </div>
-        </div>
+        {{-- skills section --}}
+        <skills :info-data="infoData"></skills>
 
 
-        <div class="ui vertical stripe quote segment">
+        <div id="play" class="ui vertical stripe quote segment">
+            <top-triangle></top-triangle>
             <div class="ui equal width stackable internally celled grid">
                 <div class="center aligned row">
                     <div class="column">
-                        <h3>123</h3>
+                        <h3>Play with this simple CNN model?</h3>
                         <p>
-                            <img src="{{ asset('images/ogimg.jpg') }}" class="ui avatar image" alt="ogimg"> <b>Ben</b> nerd
+                            <img src="{{ asset('images/head.jpg') }}" class="ui avatar image" alt="ogimg">
+                            <b></b>Follow the tip, and draw the number on the canvas.
                         </p>
                     </div>
                 </div>
             </div>
         </div>
 
-
+        <paint-panel></paint-panel>
 
         {{-- footer section --}}
         <div class="ui inverted vertical footer segment">
             <div class="ui container">
                 <div class="ui stackable inverted divided equal height stackable grid">
-                    <div class="three wide column">
-                        <h4 class="ui inverted header">About</h4>
-                        <div class="ui inverted link list">
-                            <a href="#" class="item">Sitemap</a>
+                    <div class="two wide column">
+
+                    </div>
+                    <div class="six wide column">
+                        <h2 class="ui inverted header">Contact Info</h2>
+                        <div class="ui inverted selection list">
+                            <a class="item">
+                                <div class="ui red horizontal label">Phone</div>
+                                0981241328
+                            </a>
+                            <a class="item">
+                                <div class="ui red horizontal label">E-mail</div>
+                                huang831206@gmail.com
+                            </a>
+                            <a class="item">
+                                <div class="ui red horizontal label">School</div>
+                                @{{infoData.school}}
+                            </a>
+                            <a class="item">
+                                <div class="ui red horizontal label">Department</div>
+                                @{{infoData.degree}}
+                            </a>
                         </div>
                     </div>
-                    <div class="three wide column">
-                        <h4 class="ui inverted header">Services</h4>
-                        <div class="ui inverted link list">
-                            <a href="#" class="item">Banana Pre-Order</a>
-                        </div>
+                    <div class="six wide column">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.8808916340954!2d121.19103151670802!3d24.97016675014809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDU4JzEyLjkiTiAxMjHCsDExJzM1LjMiRQ!5e0!3m2!1szh-TW!2stw!4v1528245804726" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
-                    <div class="seven wide column">
-                        <h4 class="ui inverted header">Footer Header</h4>
-                        <p>123</p>
+                    <div class="two wide column">
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-
-
-
-    {{-- <div id="lo-engage-ext-container">
-        <div data-reactroot=""></div>
-    </div> --}}
 
     <script src="{{ mix('/js/manifest.js') }}"></script>
     <script src="{{ mix('/js/vendor.js') }}"></script>
@@ -238,6 +222,10 @@
             // create sidebar and attach to menu open
             $('.ui.sidebar').sidebar('attach events', '.toc.item');
             $('.ui.dropdown').dropdown();
+
+            $('.special.cards .image').dimmer({
+                on: 'hover'
+            });
         });
 
         function vueScroll(e){
