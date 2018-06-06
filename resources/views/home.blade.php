@@ -1,10 +1,10 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="generator" content="Ben Huang">
     <meta name="author" content="Ben Huang">
     <meta name="copyright" content="黃琮閔">
@@ -26,7 +26,7 @@
     <link rel="dns-prefetch" href="https://s.w.org">
     <link rel="profile" href="http://gmpg.org/xfn/11">
 
-    <link rel="alternate" hreflang="x" />
+    <link rel="alternate" hreflang="x" href="https://me.benhuang.info" />
 
     <link rel="alternate" type="application/rss+xml" title="訂閱 Ben »" href="https://benhuang.info/feed/">
     <link rel="alternate" type="application/rss+xml" title="訂閱 Ben » 迴響" href="https://benhuang.info/comments/feed/">
@@ -103,7 +103,7 @@
                 {{-- center text --}}
                 <div class="ui text container">
                     <h1 class="ui inverted header">
-                        <img class="ui circular image" src="{{ asset('images/head.jpg') }}"><br>
+                        <img class="ui circular image" src="{{ asset('images/head.jpg') }}" alt="head"><br>
                         {{ $ssr['name'] }}
                     </h1>
                     <h2 style="color:white;">Ben Huang</h2>
@@ -188,7 +188,7 @@
                         </div>
                     </div>
                     <div class="six wide column">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.8808916340954!2d121.19103151670802!3d24.97016675014809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDU4JzEyLjkiTiAxMjHCsDExJzM1LjMiRQ!5e0!3m2!1szh-TW!2stw!4v1528245804726" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.8808916340954!2d121.19103151670802!3d24.97016675014809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDU4JzEyLjkiTiAxMjHCsDExJzM1LjMiRQ!5e0!3m2!1szh-TW!2stw!4v1528245804726" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
                     <div class="two wide column">
 
