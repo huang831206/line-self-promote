@@ -11,7 +11,7 @@
     <meta name="description" content="A introduction to Ben Huang. Hope you know me more :)">
 
     <meta property="og:title" content="Ben Huang" >
-    <meta property="og:url" content="http://benhuang.info">
+    <meta property="og:url" content="https://abouts.benhuang.info">
     <meta property="og:image" content="{{ asset('images/ogimg.jpg') }}">
     <meta property="og:description" content="A introduction to Ben Huang. Hope you know me more :)" >
 
@@ -19,20 +19,20 @@
     <meta itemprop="image" content="{{ asset('images/ogimg.jpg') }}">
     <meta itemprop="description" content="A introduction to Ben Huang.  Hope you know me more :)">
 
-    <link rel="author" href="http://benhuang.info/articles/">
-    <link rel="publisher" href="http://benhuang.info">
+    <link rel="author" href="https://benhuang.info/articles/">
+    <link rel="publisher" href="https://benhuang.info">
 
-    <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//s.w.org">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://s.w.org">
     <link rel="profile" href="http://gmpg.org/xfn/11">
 
     <link rel="alternate" hreflang="x" />
 
-    <link rel="alternate" type="application/rss+xml" title="訂閱 Ben »" href="http://benhuang.info/feed/">
-    <link rel="alternate" type="application/rss+xml" title="訂閱 Ben » 迴響" href="http://benhuang.info/comments/feed/">
+    <link rel="alternate" type="application/rss+xml" title="訂閱 Ben »" href="https://benhuang.info/feed/">
+    <link rel="alternate" type="application/rss+xml" title="訂閱 Ben » 迴響" href="https://benhuang.info/comments/feed/">
 
-    <link rel="canonical" href="http://benhuang.info/" rel="nofollow">
-    <link rel="shortlink" href="http://benhuang.info/">
+    <link rel="canonical" href="https://abouts.benhuang.info" rel="nofollow">
+    <link rel="shortlink" href="https://abouts.benhuang.info" rel="nofollow">
 
 
     <!-- CSRF Token -->
