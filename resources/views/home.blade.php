@@ -26,7 +26,7 @@
     <link rel="dns-prefetch" href="https://s.w.org">
     <link rel="profile" href="http://gmpg.org/xfn/11">
 
-    <link rel="alternate" hreflang="x" href="https://me.benhuang.info" />
+    <link rel="alternate" hreflang="en" href="https://me.benhuang.info" />
 
     <link rel="alternate" type="application/rss+xml" title="訂閱 Ben »" href="https://benhuang.info/feed/">
     <link rel="alternate" type="application/rss+xml" title="訂閱 Ben » 迴響" href="https://benhuang.info/comments/feed/">
