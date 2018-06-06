@@ -11,7 +11,7 @@
     <meta name="description" content="A introduction to Ben Huang. Hope you know me more :)">
 
     <meta property="og:title" content="Ben Huang" >
-    <meta property="og:url" content="https://abouts.benhuang.info">
+    <meta property="og:url" content="https://me.benhuang.info">
     <meta property="og:image" content="{{ asset('images/ogimg.jpg') }}">
     <meta property="og:description" content="A introduction to Ben Huang. Hope you know me more :)" >
 
@@ -31,8 +31,8 @@
     <link rel="alternate" type="application/rss+xml" title="訂閱 Ben »" href="https://benhuang.info/feed/">
     <link rel="alternate" type="application/rss+xml" title="訂閱 Ben » 迴響" href="https://benhuang.info/comments/feed/">
 
-    <link rel="canonical" href="https://abouts.benhuang.info" rel="nofollow">
-    <link rel="shortlink" href="https://abouts.benhuang.info" rel="nofollow">
+    <link rel="canonical" href="https://me.benhuang.info" rel="nofollow">
+    <link rel="shortlink" href="https://me.benhuang.info" rel="nofollow">
 
 
     <!-- CSRF Token -->
@@ -125,7 +125,7 @@
                         <div class="column">
                             <h3 v-text="quote"></h3>
                             <p>
-                                <img src="{{ asset('images/kaisa.jpg') }}" class="ui avatar image" alt="quote">
+                                <img src="{{ asset('images/Kaisa.jpg') }}" class="ui avatar image" alt="quote">
                                 <b v-text="from"></b>
                             </p>
                         </div>
